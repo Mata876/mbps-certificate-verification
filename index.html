@@ -37,7 +37,7 @@ footer{background:#102d5b;color:white;text-align:center;padding:25px 5%}footer a
 <footer>© माता भगवती प्रशिक्षण संस्थान, सकरी · कौशल, सम्मान और आत्मनिर्भरता</footer>
 <script>
 window.CERTIFICATE_RECORDS = [
- {"certificateNo":"MBPS/BP/2023-2024/002","name":"Geeta Kumari","course":"Beauty Parlour (Beauty & Wellness)","duration":"01 Year (2023–2024)","completionDate":"2024","issuer":"Mata Bhagwati Prashikshan Sansthan, Sakri","status":"सत्यापित रिकॉर्ड"}
+ {"certificateNo":"MBPS/TL/2023-2024/002","name":"Geeta Kumari (गीता कुमारी)","fatherName":"Baliram Singh (बलिराम सिंह)","dateOfBirth":"26/01/1990","course":"Tailoring (Sewing & Cutting) / टेलरिंग (सिलाई-कढ़ाई)","duration":"01 Year (1 वर्ष)","session":"2023–2024","completionDate":"2024","issuer":"Mata Bhagwati Prashikshan Sansthan, Sakri","status":"सत्यापित रिकॉर्ड"}
 ];
 </script><script>
 function verify(){
@@ -47,7 +47,7 @@ function verify(){
  const rec=(window.CERTIFICATE_RECORDS||[]).find(r=>(r.certificateNo||'').replace(/[\s\u200B-\u200D]/g,'').toLowerCase()===q);
  if(!rec){msg.innerHTML='<p class="err">रिकॉर्ड नहीं मिला। प्रमाण पत्र संख्या जाँचें या संस्थान से संपर्क करें।</p>';return}
  details.innerHTML='';
- [['उम्मीदवार का नाम','name'],['प्रमाण पत्र संख्या','certificateNo'],['कोर्स','course'],['अवधि','duration'],['पूरा होने की तारीख','completionDate'],['प्रशिक्षण देने वाला','provider'],['जारी करने वाला संस्थान','issuer'],['स्थिति','status']].forEach(([label,key])=>{let d=document.createElement('div');d.className='field';let b=document.createElement('strong');b.textContent=label;let p=document.createElement('div');p.textContent=rec[key]||'—';d.append(b,p);details.append(d)});
+ [['उम्मीदवार का नाम','name'],['पिता का नाम','fatherName'],['जन्मतिथि','dateOfBirth'],['प्रमाण पत्र संख्या','certificateNo'],['कोर्स','course'],['अवधि','duration'],['सत्र','session'],['पूरा होने की तारीख','completionDate'],['जारी करने वाला संस्थान','issuer'],['स्थिति','status']].forEach(([label,key])=>{let d=document.createElement('div');d.className='field';let b=document.createElement('strong');b.textContent=label;let p=document.createElement('div');p.textContent=rec[key]||'—';d.append(b,p);details.append(d)});
  if(rec.pdfUrl){let a=document.createElement('a');a.href=rec.pdfUrl;a.target='_blank';a.rel='noopener';a.className='btn';a.textContent='प्रमाण पत्र PDF खोलें';pdf.append(a)}
  result.hidden=false;
 }
